@@ -1,0 +1,15 @@
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251012T004447_ca657400556540c3b86515abbba1e654.txt
+Proxying request id=ca657400556540c3b86515abbba1e654 GET /? -> https://play.min.io:9000/
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251012T004905_379c0bebec0249e095ae753d690ec3ba.txt
+Proxying request id=379c0bebec0249e095ae753d690ec3ba GET /? -> https://play.min.io:9000/
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:9000
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:9000
+Saved request log logged_requests/20251012T011028_873f3a73f41e40e4ab5f4300907ab21a.txt
+Proxying request id=873f3a73f41e40e4ab5f4300907ab21a GET /? -> https://play.min.io:9000/
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:9000
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:9000
+Saved request log logged_requests/20251012T011048_d926d826b9ea479f9b51bd284c6cd660.txt
+Proxying request id=d926d826b9ea479f9b51bd284c6cd660 GET /? -> https://play.min.io:9000/

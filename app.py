@@ -17,6 +17,11 @@ from pathlib import Path
 from flask import Flask, request, Response, abort
 import requests
 
+import logging, json
+from logging.handlers import RotatingFileHandler
+from prometheus_client import Counter, Histogram, generate_latest
+
+
 # ---------- CONFIG ----------
 # Destination MinIO server (single backend). Must include scheme and optional port.
 # Example: "http://192.168.192.200:9000"
@@ -35,6 +40,16 @@ RESPONSE_CHUNK_SIZE = 64 * 1024
 # Logging setup
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("s3proxy")
+handler = RotatingFileHandler("proxy.log", maxBytes=50_000_000, backupCount=10)
+handler.setFormatter(logging.Formatter('%(message)s'))
+logger.addHandler(handler)
+
+# Metrics
+REQ_COUNT = Counter("s3proxy_requests_total", "Total requests", ["method", "status"])
+REQ_LATENCY = Histogram("s3proxy_request_duration_seconds", "Latency")
+
+def log_request_json(meta, headers):
+    logger.info(json.dumps({"ts": meta["timestamp"], "id": meta["id"], "meta": meta, "headers": headers}))
 
 app = Flask(__name__)
 
@@ -163,6 +178,14 @@ def _filter_response_headers(resp_headers):
         headers.append((k, v))
     return headers
 
+@app.route("/healthz")
+def healthz():
+    return "ok", 200
+
+@app.route("/metrics")
+def metrics():
+    return generate_latest(), 200
+
 @app.route("/", methods=["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS", "PATCH"])
 @app.route("/minio", methods=["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS", "PATCH"])
 @app.route("/minio/", methods=["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS", "PATCH"])
@@ -230,6 +253,33 @@ def proxy_minio(path=None):
                 stream=True,
                 timeout=None,
             )
+            # try:
+            #     # (existing code that does resp = requests.request(...))
+            #     # << your existing requests.request call producing `resp` >>
+            # except requests.RequestException as e:
+            #     logger.exception("Error forwarding request to backend")
+            #     return abort(502, description=f"Backend forwarding error: {e}")
+
+            # # --- DEBUG: if backend returns an error, save its body for inspection
+            # try:
+            #     if resp.status_code >= 400:
+            #         resp_text = None
+            #         # try to read small response bodies safely
+            #         try:
+            #             resp_text = resp.text
+            #         except Exception:
+            #             # if it's streaming large content, read up to a reasonable limit
+            #             resp_text = resp.raw.read(8192, decode_content=True)
+            #         debug_fname = LOG_DIR / f"{req_id}_backend_response.txt"
+            #         with open(debug_fname, "wb") as df:
+            #             if isinstance(resp_text, str):
+            #                 df.write(resp_text.encode("utf-8", errors="replace"))
+            #             else:
+            #                 df.write(resp_text or b"")
+            #         logger.info("Saved backend response for req %s -> %s", req_id, debug_fname)
+            # except Exception:
+            #     logger.exception("Failed to save backend response body")
+
         else:
             # file object (large upload) - pass the file object as data (it will be streamed)
             fileobj = body_or_fileobj
@@ -278,7 +328,7 @@ def proxy_minio(path=None):
 
 if __name__ == "__main__":
     bind_host = os.environ.get("LISTEN_HOST", "0.0.0.0")
-    bind_port = int(os.environ.get("LISTEN_PORT", 5001))
+    bind_port = int(os.environ.get("LISTEN_PORT", 9000))
     logger.info("Starting S3 proxy (forwarding to %s) on %s:%s", MINIO_TARGET, bind_host, bind_port)
     # Note: For production use, run behind a robust server (gunicorn) or use gunicorn's --workers.
     app.run(host=bind_host, port=bind_port, threaded=True)

@@ -1,0 +1,17 @@
+timestamp: 20251012T004447
+id: ca657400556540c3b86515abbba1e654
+timestamp: 2025-10-12 00:44:47
+client_addr: 192.168.1.6
+method: GET
+full_path: /?
+content_length: 0
+
+Headers:
+Host: 192.168.1.6:5001
+Accept-Encoding: identity
+User-Agent: aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/macos#24.3.0 md/arch#arm64 lang/python#3.13.8 md/pyimpl#CPython m/N,C,Z,n,b,E cfg/retry-mode#standard md/installer#source md/prompt#off md/command#s3.ls
+X-Amz-Date: 20251011T191447Z
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Authorization: AWS4-HMAC-SHA256 Credential=minioadmin/20251011/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=11bf55742a2e8088454d02555244ee02047a28ae7ebeb8577299c8c57e63358f
+
+Body file: logged_requests/20251012T004447_6a17a33d81cf41998fb3a3265b60edb2.body

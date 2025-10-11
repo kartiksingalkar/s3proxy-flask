@@ -157,6 +157,11 @@ def _build_target_url():
     """
     # request.full_path often ends with '?' if there's no query string, so construct cleanly:
     path = request.path  # includes '/minio' prefix used by clients
+    path = request.path
+    if path.startswith("/minio/"):
+        path = path[len("/"):]
+    elif path.startswith("/minio"):
+        path = path[len("/"):]
     query = request.query_string.decode() if request.query_string else ""
     if query:
         return f"{MINIO_TARGET}{path}?{query}"
@@ -328,7 +333,7 @@ def proxy_minio(path=None):
 
 if __name__ == "__main__":
     bind_host = os.environ.get("LISTEN_HOST", "0.0.0.0")
-    bind_port = int(os.environ.get("LISTEN_PORT", 9000))
+    bind_port = int(os.environ.get("LISTEN_PORT", 5001))
     logger.info("Starting S3 proxy (forwarding to %s) on %s:%s", MINIO_TARGET, bind_host, bind_port)
     # Note: For production use, run behind a robust server (gunicorn) or use gunicorn's --workers.
     app.run(host=bind_host, port=bind_port, threaded=True)

@@ -1,0 +1,18 @@
+timestamp: 20251012T125831
+id: 80998a706fb049eea46eb4a41b46bb6c
+timestamp: 2025-10-12 12:58:31
+client_addr: 192.168.1.6
+method: PUT
+full_path: /awss3mbpyy?
+content_length: 0
+
+Headers:
+Host: 192.168.1.6:5001
+Accept-Encoding: identity
+User-Agent: aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/macos#24.3.0 md/arch#arm64 lang/python#3.13.8 md/pyimpl#CPython m/b,n,E,N,Z cfg/retry-mode#standard md/installer#source md/prompt#off md/command#s3.mb
+X-Amz-Date: 20251012T072831Z
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Authorization: AWS4-HMAC-SHA256 Credential=minioadmin/20251012/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=61753b2679efb0393ca58406c82c515a33d993a5a5c03f1a42204c8f8f04787f
+Content-Length: 0
+
+Body file: logged_requests/20251012T125831_8d71d7f430e54f70b4e63f18d19fe5c2.body

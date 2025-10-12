@@ -22,3 +22,21 @@ Saved request log logged_requests/20251012T014335_db6bd61d703242fdbd9aafd95a2dcf
 Proxying request id=db6bd61d703242fdbd9aafd95a2dcf43 GET /? -> https://play.min.io:9000/
 Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
 Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251012T125831_80998a706fb049eea46eb4a41b46bb6c.txt
+Proxying request id=80998a706fb049eea46eb4a41b46bb6c PUT /awss3mbpyy? -> https://play.min.io:9000/awss3mbpyy
+Saved request log logged_requests/20251012T130027_7f4bf2c2c4d44f45bdbb939d712a7bd6.txt
+Proxying request id=7f4bf2c2c4d44f45bdbb939d712a7bd6 GET /? -> https://play.min.io:9000/
+Saved request log logged_requests/20251012T130102_f785d3af273645b5be6f7e1e71e5162a.txt
+Proxying request id=f785d3af273645b5be6f7e1e71e5162a PUT /testbucket? -> https://play.min.io:9000/testbucket
+Saved backend response for req f785d3af273645b5be6f7e1e71e5162a -> logged_requests/f785d3af273645b5be6f7e1e71e5162a_backend_response.txt
+Saved request log logged_requests/20251012T130219_1abd9d0b51d446f6bbeed8c7f368eee1.txt
+Proxying request id=1abd9d0b51d446f6bbeed8c7f368eee1 PUT /awss3mbpyy/folder1/? -> https://play.min.io:9000/awss3mbpyy/folder1/
+Saved request log logged_requests/20251012T131323_5befbc67b5014bf5a39b5bb06edb4465.txt
+Proxying request id=5befbc67b5014bf5a39b5bb06edb4465 PUT /awss3mbpyy/test.txt? -> https://play.min.io:9000/awss3mbpyy/test.txt
+Saved request log logged_requests/20251012T131459_8dd2c692646b4a608869d3746b27f408.txt
+Proxying request id=8dd2c692646b4a608869d3746b27f408 GET /awss3mbpy?list-type=2&prefix=&delimiter=%2F&encoding-type=url -> https://play.min.io:9000/awss3mbpy?list-type=2&prefix=&delimiter=%2F&encoding-type=url
+Saved request log logged_requests/20251012T131508_567a096de7c546f4946c83081d93edcc.txt
+Proxying request id=567a096de7c546f4946c83081d93edcc GET /awss3mbpyy?list-type=2&prefix=&delimiter=%2F&encoding-type=url -> https://play.min.io:9000/awss3mbpyy?list-type=2&prefix=&delimiter=%2F&encoding-type=url
+Saved request log logged_requests/20251012T131610_896b694f3ad9404eb824ff580b891d36.txt
+Proxying request id=896b694f3ad9404eb824ff580b891d36 DELETE /awss3mbpyy/test.txt? -> https://play.min.io:9000/awss3mbpyy/test.txt

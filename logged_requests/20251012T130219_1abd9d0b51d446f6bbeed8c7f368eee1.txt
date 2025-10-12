@@ -1,0 +1,20 @@
+timestamp: 20251012T130219
+id: 1abd9d0b51d446f6bbeed8c7f368eee1
+timestamp: 2025-10-12 13:02:19
+client_addr: 192.168.1.6
+method: PUT
+full_path: /awss3mbpyy/folder1/?
+content_length: 0
+
+Headers:
+Host: 192.168.1.6:5001
+Accept-Encoding: identity
+User-Agent: aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/macos#24.3.0 md/arch#arm64 lang/python#3.13.8 md/pyimpl#CPython m/E,N,n,Z,b,W cfg/retry-mode#standard md/installer#source md/prompt#off md/command#s3api.put-object
+X-Amz-Checksum-Crc64Nvme: AAAAAAAAAAA=
+X-Amz-Sdk-Checksum-Algorithm: CRC64NVME
+X-Amz-Date: 20251012T073219Z
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Authorization: AWS4-HMAC-SHA256 Credential=minioadmin/20251012/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-checksum-crc64nvme;x-amz-content-sha256;x-amz-date;x-amz-sdk-checksum-algorithm, Signature=0ac4309f406f642d2ee8310a83f941cbead3aafb36ab60b4d00f76d380320270
+Content-Length: 0
+
+Body file: logged_requests/20251012T130219_3b0abc513fe243398b206cffe153a754.body

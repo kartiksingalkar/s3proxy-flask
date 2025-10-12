@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>BucketAlreadyOwnedByYou</Code><Message>Your previous request to create the named bucket succeeded and you already own it.</Message><BucketName>testbucket</BucketName><Resource>/testbucket</Resource><Region>us-east-1</Region><RequestId>186DADED2116573E</RequestId><HostId>3e996b2f640d7e065d3a5c4e39a5538cefb82e3e77771990265e4698d8681eac</HostId></Error>

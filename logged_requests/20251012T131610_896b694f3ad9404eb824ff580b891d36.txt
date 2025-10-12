@@ -1,0 +1,18 @@
+timestamp: 20251012T131610
+id: 896b694f3ad9404eb824ff580b891d36
+timestamp: 2025-10-12 13:16:10
+client_addr: 192.168.1.6
+method: DELETE
+full_path: /awss3mbpyy/test.txt?
+content_length: 0
+
+Headers:
+Host: 192.168.1.6:5001
+Accept-Encoding: identity
+User-Agent: aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/macos#24.3.0 md/arch#arm64 lang/python#3.13.8 md/pyimpl#CPython m/b,N,E,G,Z cfg/retry-mode#standard md/installer#source md/prompt#off md/command#s3.rm
+X-Amz-Date: 20251012T074610Z
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Authorization: AWS4-HMAC-SHA256 Credential=minioadmin/20251012/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=11a7b8c09c62eeb911bc14f688e9f8096a284d5cf3499a0a3a37665c0d74264c
+Content-Length: 0
+
+Body file: logged_requests/20251012T131610_8103fd7fc75f4864af6d065c54121f18.body

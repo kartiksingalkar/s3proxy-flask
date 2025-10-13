@@ -15,13 +15,13 @@ import logging
 import tempfile
 from pathlib import Path
 from flask import Flask, request, Response, abort
-import requests
+import requests 
 import json
 from logging.handlers import RotatingFileHandler
 from prometheus_client import Counter, Histogram, generate_latest
 
 # ---------- CONFIG ----------
-MINIO_TARGET = os.environ.get("MINIO_TARGET", "https://play.min.io:9000")
+MINIO_TARGET = os.environ.get("MINIO_TARGET", "http://192.168.192.115:9000")
 LOG_DIR = Path(os.environ.get("S3_PROXY_LOG_DIR", "./logged_requests"))
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -35,7 +35,7 @@ handler = RotatingFileHandler("proxy.log", maxBytes=50_000_000, backupCount=10)
 handler.setFormatter(logging.Formatter('%(message)s'))
 logger.addHandler(handler)
 
-# Metrics (unused counters can be incremented where appropriate)
+# Metrics
 REQ_COUNT = Counter("s3proxy_requests_total", "Total requests", ["method", "status"])
 REQ_LATENCY = Histogram("s3proxy_request_duration_seconds", "Latency")
 

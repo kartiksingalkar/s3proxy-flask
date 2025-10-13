@@ -40,3 +40,25 @@ Saved request log logged_requests/20251012T131508_567a096de7c546f4946c83081d93ed
 Proxying request id=567a096de7c546f4946c83081d93edcc GET /awss3mbpyy?list-type=2&prefix=&delimiter=%2F&encoding-type=url -> https://play.min.io:9000/awss3mbpyy?list-type=2&prefix=&delimiter=%2F&encoding-type=url
 Saved request log logged_requests/20251012T131610_896b694f3ad9404eb824ff580b891d36.txt
 Proxying request id=896b694f3ad9404eb824ff580b891d36 DELETE /awss3mbpyy/test.txt? -> https://play.min.io:9000/awss3mbpyy/test.txt
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T100630_18cd972720d3408d99a156e0ad568c3d.txt
+Proxying request id=18cd972720d3408d99a156e0ad568c3d GET /? -> https://play.min.io:9000/
+Saved backend response for req 18cd972720d3408d99a156e0ad568c3d -> logged_requests/18cd972720d3408d99a156e0ad568c3d_backend_response.txt
+Saved request log logged_requests/20251013T100638_9e53060f75f74eecb424a3b9680e1380.txt
+Proxying request id=9e53060f75f74eecb424a3b9680e1380 GET /? -> https://play.min.io:9000/
+Starting S3 proxy (forwarding to http://192.168.192.115:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T100708_0b0769e6c9884bdbbbe39ec3ca97f3a4.txt
+Proxying request id=0b0769e6c9884bdbbbe39ec3ca97f3a4 GET /? -> http://192.168.192.115:9000/
+Saved request log logged_requests/20251013T100816_fea92c82252e44688899adcd9ee737ee.txt
+Proxying request id=fea92c82252e44688899adcd9ee737ee PUT /kartik-aws? -> http://192.168.192.115:9000/kartik-aws
+Saved request log logged_requests/20251013T100823_953dfff44373482a8a1ab6321d22666a.txt
+Proxying request id=953dfff44373482a8a1ab6321d22666a GET /? -> http://192.168.192.115:9000/
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T104609_663530c38e6a49728534e6310a0e5505.txt
+Proxying request id=663530c38e6a49728534e6310a0e5505 GET /? -> https://play.min.io:9000/
+Saved response meta logged_requests/responses/20251013T104610_663530c38e6a49728534e6310a0e5505_meta.json
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T111533_6f4faa7619c147039a4cc3c95a2e6b21.txt
+Proxying request id=6f4faa7619c147039a4cc3c95a2e6b21 GET /? -> https://play.min.io:9000/
+Saved response meta logged_requests/responses/20251013T111534_6f4faa7619c147039a4cc3c95a2e6b21_meta.json
+Saved response body key-value json logged_requests/responses/20251013T111535_6f4faa7619c147039a4cc3c95a2e6b21_body_kv.json

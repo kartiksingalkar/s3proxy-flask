@@ -1,0 +1,18 @@
+timestamp: 20251013T100816
+id: fea92c82252e44688899adcd9ee737ee
+timestamp: 2025-10-13 10:08:16
+client_addr: 192.168.192.65
+method: PUT
+full_path: /kartik-aws?
+content_length: 0
+
+Headers:
+Host: 192.168.192.65:5001
+Accept-Encoding: identity
+User-Agent: aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/linux#6.14.0-33-generic md/arch#x86_64 lang/python#3.13.7 md/pyimpl#CPython m/b,n,Z,E,N cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.25 md/prompt#off md/command#s3.mb
+X-Amz-Date: 20251013T043816Z
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Authorization: AWS4-HMAC-SHA256 Credential=minioadmin/20251013/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=60300bd15033b3d8c810b031b780ce3ae20018bf1b7c7c1985367bd60ac6e845
+Content-Length: 0
+
+Body file: logged_requests/20251013T100816_48c5aa520efc46cfa0aa6baedc08b148.body

@@ -1,0 +1,17 @@
+timestamp: 20251013T100630
+id: 18cd972720d3408d99a156e0ad568c3d
+timestamp: 2025-10-13 10:06:30
+client_addr: 192.168.192.65
+method: GET
+full_path: /?
+content_length: 0
+
+Headers:
+Host: 192.168.192.65:5001
+Accept-Encoding: identity
+User-Agent: aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/linux#6.14.0-33-generic md/arch#x86_64 lang/python#3.13.7 md/pyimpl#CPython m/n,Z,E,b,C,N cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.25 md/prompt#off md/command#s3.ls
+X-Amz-Date: 20251013T043630Z
+X-Amz-Content-Sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Authorization: AWS4-HMAC-SHA256 Credential=gIEasfRPQrqYoHRIFT0V/20251013/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=abd2991f72fed67b200460468bc97c207964258de758cb2ba0476252ff4cb142
+
+Body file: logged_requests/20251013T100630_73f79ab9bf604a78bfe9afa4281b93a3.body

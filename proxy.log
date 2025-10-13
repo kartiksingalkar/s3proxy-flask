@@ -62,3 +62,18 @@ Saved request log logged_requests/20251013T111533_6f4faa7619c147039a4cc3c95a2e6b
 Proxying request id=6f4faa7619c147039a4cc3c95a2e6b21 GET /? -> https://play.min.io:9000/
 Saved response meta logged_requests/responses/20251013T111534_6f4faa7619c147039a4cc3c95a2e6b21_meta.json
 Saved response body key-value json logged_requests/responses/20251013T111535_6f4faa7619c147039a4cc3c95a2e6b21_body_kv.json
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T112130_579de164f5624781b9d10ecb963c1401.txt
+Proxying request id=579de164f5624781b9d10ecb963c1401 GET /? -> https://play.min.io:9000/
+Saved response meta logged_requests/responses/20251013T112131_579de164f5624781b9d10ecb963c1401_meta.json
+Saved response body key-value json logged_requests/responses/20251013T112132_579de164f5624781b9d10ecb963c1401_body_kv.json
+Starting S3 proxy (forwarding to https://play.min.io:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T112602_dcd7f3eb350e437aa7220f872c74de06.txt
+Proxying request id=dcd7f3eb350e437aa7220f872c74de06 GET /? -> https://play.min.io:9000/
+Saved response meta logged_requests/responses/20251013T112603_dcd7f3eb350e437aa7220f872c74de06_meta.json
+Saved readable response body JSON logged_requests/responses/20251013T112603_dcd7f3eb350e437aa7220f872c74de06_body_kv.json
+Starting S3 proxy (forwarding to http://192.168.192.115:9000) on 0.0.0.0:5001
+Saved request log logged_requests/20251013T112706_54a6902534d24a23a8866e92ad813cdc.txt
+Proxying request id=54a6902534d24a23a8866e92ad813cdc GET /? -> http://192.168.192.115:9000/
+Saved response meta logged_requests/responses/20251013T112706_54a6902534d24a23a8866e92ad813cdc_meta.json
+Saved readable response body JSON logged_requests/responses/20251013T112706_54a6902534d24a23a8866e92ad813cdc_body_kv.json

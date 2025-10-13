@@ -1,0 +1,246 @@
+{
+  "type": "s3_bucket_list",
+  "count": 60,
+  "buckets": [
+    {
+      "name": "aws-bucket-proxcddy",
+      "creationDate": "2025-10-08T11:12:22.628Z"
+    },
+    {
+      "name": "aws-bucket-proxddy",
+      "creationDate": "2025-10-08T10:38:59.491Z"
+    },
+    {
+      "name": "aws-bucket-proxdy",
+      "creationDate": "2025-10-08T10:06:48.846Z"
+    },
+    {
+      "name": "aws-bucket-proxy",
+      "creationDate": "2025-10-08T08:59:57.126Z"
+    },
+    {
+      "name": "aws-test-bucket",
+      "creationDate": "2025-10-07T06:49:44.482Z"
+    },
+    {
+      "name": "bucket123",
+      "creationDate": "2025-09-30T07:16:09.048Z"
+    },
+    {
+      "name": "bucketpp-1",
+      "creationDate": "2025-10-06T10:53:23.589Z"
+    },
+    {
+      "name": "conmhp",
+      "creationDate": "2025-09-03T09:26:05.477Z"
+    },
+    {
+      "name": "cookie-data",
+      "creationDate": "2025-09-18T09:49:53.717Z"
+    },
+    {
+      "name": "dellcon",
+      "creationDate": "2025-09-03T07:15:35.671Z"
+    },
+    {
+      "name": "dev-uat-test",
+      "creationDate": "2025-09-15T06:16:29.698Z"
+    },
+    {
+      "name": "dgg-files",
+      "creationDate": "2025-09-25T05:27:37.800Z"
+    },
+    {
+      "name": "diff-files",
+      "creationDate": "2025-09-17T10:08:43.296Z"
+    },
+    {
+      "name": "docs-storage",
+      "creationDate": "2025-09-25T05:31:33.616Z"
+    },
+    {
+      "name": "docs-storage-1",
+      "creationDate": "2025-09-25T05:33:53.941Z"
+    },
+    {
+      "name": "execution-bucket-uat-test",
+      "creationDate": "2025-09-08T11:19:24.561Z"
+    },
+    {
+      "name": "fdrt-files",
+      "creationDate": "2025-09-18T06:26:22.248Z"
+    },
+    {
+      "name": "gopal",
+      "creationDate": "2025-10-08T07:30:31.281Z"
+    },
+    {
+      "name": "gui-interface",
+      "creationDate": "2025-09-16T10:49:32.917Z"
+    },
+    {
+      "name": "host-file",
+      "creationDate": "2025-07-14T05:04:53.885Z"
+    },
+    {
+      "name": "img-data",
+      "creationDate": "2025-09-18T06:04:20.307Z"
+    },
+    {
+      "name": "jjt-test",
+      "creationDate": "2025-09-17T08:51:40.835Z"
+    },
+    {
+      "name": "kartik-aws",
+      "creationDate": "2025-10-13T04:38:16.995Z"
+    },
+    {
+      "name": "kissan-drone",
+      "creationDate": "2025-07-18T06:36:59.643Z"
+    },
+    {
+      "name": "miltuser",
+      "creationDate": "2025-08-25T08:54:03.579Z"
+    },
+    {
+      "name": "mmmt-files",
+      "creationDate": "2025-09-18T06:05:17.387Z"
+    },
+    {
+      "name": "new-service1",
+      "creationDate": "2025-09-25T10:05:25.783Z"
+    },
+    {
+      "name": "newsf",
+      "creationDate": "2025-09-30T09:25:42.932Z"
+    },
+    {
+      "name": "newtest-files",
+      "creationDate": "2025-09-18T04:35:14.790Z"
+    },
+    {
+      "name": "obj-dto",
+      "creationDate": "2025-09-25T09:10:19.459Z"
+    },
+    {
+      "name": "obj-entity",
+      "creationDate": "2025-09-25T09:23:51.406Z"
+    },
+    {
+      "name": "object-files",
+      "creationDate": "2025-09-25T05:16:04.421Z"
+    },
+    {
+      "name": "object-storage",
+      "creationDate": "2025-09-25T05:27:14.255Z"
+    },
+    {
+      "name": "object-storagefiles",
+      "creationDate": "2025-09-25T05:26:55.950Z"
+    },
+    {
+      "name": "object-testu",
+      "creationDate": "2025-09-25T07:48:52.871Z"
+    },
+    {
+      "name": "onlineuser",
+      "creationDate": "2025-08-25T09:24:42.057Z"
+    },
+    {
+      "name": "pass-files",
+      "creationDate": "2025-09-18T09:22:44.942Z"
+    },
+    {
+      "name": "pinn4-1",
+      "creationDate": "2025-10-09T10:02:09.047Z"
+    },
+    {
+      "name": "planning-bucket-test",
+      "creationDate": "2025-09-08T11:18:15.377Z"
+    },
+    {
+      "name": "planning-bucket-uat-test",
+      "creationDate": "2025-09-08T11:19:11.515Z"
+    },
+    {
+      "name": "pp-bucket1",
+      "creationDate": "2025-10-06T10:35:13.736Z"
+    },
+    {
+      "name": "ppps",
+      "creationDate": "2025-09-08T10:15:01.162Z"
+    },
+    {
+      "name": "prod-test",
+      "creationDate": "2025-09-16T07:05:01.452Z"
+    },
+    {
+      "name": "reourceapp",
+      "creationDate": "2025-08-25T05:28:22.943Z"
+    },
+    {
+      "name": "sharelinktest",
+      "creationDate": "2025-07-14T06:13:54.638Z"
+    },
+    {
+      "name": "ssl-test",
+      "creationDate": "2025-09-15T06:22:46.075Z"
+    },
+    {
+      "name": "test-bucket1",
+      "creationDate": "2025-09-30T07:18:21.081Z"
+    },
+    {
+      "name": "ticketing-system",
+      "creationDate": "2025-09-16T09:51:18.314Z"
+    },
+    {
+      "name": "trybucket1",
+      "creationDate": "2025-09-30T07:20:16.244Z"
+    },
+    {
+      "name": "ttt-st",
+      "creationDate": "2025-09-25T05:41:23.478Z"
+    },
+    {
+      "name": "tuiiis",
+      "creationDate": "2025-09-08T10:10:54.494Z"
+    },
+    {
+      "name": "tyur-files",
+      "creationDate": "2025-09-17T12:08:40.234Z"
+    },
+    {
+      "name": "tyy-files",
+      "creationDate": "2025-09-17T12:06:58.040Z"
+    },
+    {
+      "name": "unit-testing",
+      "creationDate": "2025-09-15T09:50:22.641Z"
+    },
+    {
+      "name": "uthh-files",
+      "creationDate": "2025-09-17T12:07:43.090Z"
+    },
+    {
+      "name": "utyt-test",
+      "creationDate": "2025-09-17T11:44:58.169Z"
+    },
+    {
+      "name": "vc-tt1",
+      "creationDate": "2025-09-04T05:53:24.041Z"
+    },
+    {
+      "name": "volume-zfs2",
+      "creationDate": "2025-09-15T10:48:03.239Z"
+    },
+    {
+      "name": "volume-zfs3",
+      "creationDate": "2025-09-15T10:53:57.089Z"
+    },
+    {
+      "name": "vwd",
+      "creationDate": "2025-10-08T07:31:15.399Z"
+    }
+  ]
+}

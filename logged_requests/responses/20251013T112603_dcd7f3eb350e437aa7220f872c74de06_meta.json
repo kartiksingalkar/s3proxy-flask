@@ -1,0 +1,42 @@
+{
+  "id": "dcd7f3eb350e437aa7220f872c74de06",
+  "timestamp": "20251013T112603",
+  "request": {
+    "method": "GET",
+    "path": "/?",
+    "headers": {
+      "Host": "192.168.192.65:5001",
+      "Accept-Encoding": "identity",
+      "User-Agent": "aws-cli/2.31.13 md/awscrt#0.27.6 ua/2.1 os/linux#6.14.0-33-generic md/arch#x86_64 lang/python#3.13.7 md/pyimpl#CPython m/E,N,Z,n,b,C cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.25 md/prompt#off md/command#s3.ls",
+      "X-Amz-Date": "20251013T055602Z",
+      "X-Amz-Content-Sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "Authorization": "AWS4-HMAC-SHA256 Credential=minioadmin/20251013/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=ceec0e966474996646eaa20ad4333d3e3342a72c06e505a71c5bb82468e0b7d6"
+    },
+    "body_file": "logged_requests/20251013T112602_b8a39fac1ab14bc1a16b5cef2e8a20fc.body"
+  },
+  "response": {
+    "status_code": 200,
+    "reason": "OK",
+    "headers": {
+      "Accept-Ranges": "bytes",
+      "Content-Length": "64483",
+      "Content-Type": "application/xml",
+      "Server": "MinIO",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Vary": "Origin, Accept-Encoding",
+      "X-Amz-Bucket-Region": "us-east-1",
+      "X-Amz-Id-2": "3e996b2f640d7e065d3a5c4e39a5538cefb82e3e77771990265e4698d8681eac",
+      "X-Amz-Request-Id": "186DF7527C62E665",
+      "X-Content-Type-Options": "nosniff",
+      "X-Ratelimit-Limit": "160000",
+      "X-Ratelimit-Remaining": "159999",
+      "X-Xss-Protection": "1; mode=block",
+      "Date": "Mon, 13 Oct 2025 05:56:03 GMT"
+    },
+    "body_file": "logged_requests/responses/20251013T112603_dcd7f3eb350e437aa7220f872c74de06.body",
+    "content_length_header": "64483",
+    "content_type": "application/xml",
+    "x_amz_request_id": "186DF7527C62E665",
+    "elapsed_seconds": 0.898553
+  }
+}

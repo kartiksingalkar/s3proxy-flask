@@ -22,7 +22,7 @@ from logging.handlers import RotatingFileHandler
 from prometheus_client import Counter, Histogram, generate_latest
 
 # ---------- CONFIG ----------
-MINIO_TARGET = os.environ.get("MINIO_TARGET", "https://play.min.io:9000")
+MINIO_TARGET = os.environ.get("MINIO_TARGET", "http://192.168.192.115:9000")
 LOG_DIR = Path(os.environ.get("S3_PROXY_LOG_DIR", "./logged_requests"))
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 RESPONSE_LOG_DIR = LOG_DIR / "responses"
@@ -359,31 +359,63 @@ def proxy_minio(path=None):
             except Exception:
                 logger.exception("Failed to write response meta")
 
-            # Now create a key:value JSON file containing the response body content
+            # --- improved, readable response body KV file ---
             try:
                 body_kv_path = RESPONSE_LOG_DIR / f"{time.strftime('%Y%m%dT%H%M%S')}_{req_id}_body_kv.json"
                 if resp_body_f and response_body_path.exists():
                     try:
                         with open(response_body_path, "rb") as bf:
                             body_bytes = bf.read()
-                        # try to decode as utf-8 text, fallback to base64
+
+                        # Try text path first
                         try:
-                            body_text = body_bytes.decode("utf-8")
-                            body_entry = {"body": body_text, "encoding": "utf-8"}
-                        except Exception:
+                            text = body_bytes.decode("utf-8")
+                            # Try JSON
+                            try:
+                                parsed_json = json.loads(text)
+                                body_entry = {"type": "json", "value": parsed_json}
+                            except Exception:
+                                # Try to parse known S3 XML (ListAllMyBucketsResult) into concise structure
+                                try:
+                                    import xml.etree.ElementTree as ET
+                                    root = ET.fromstring(text)
+                                    ns = {"s3": "http://s3.amazonaws.com/doc/2006-03-01/"}
+                                    buckets = []
+                                    # find Bucket elements (works even if namespace present)
+                                    for b in root.findall(".//{http://s3.amazonaws.com/doc/2006-03-01/}Bucket"):
+                                        name_el = b.find("{http://s3.amazonaws.com/doc/2006-03-01/}Name")
+                                        date_el = b.find("{http://s3.amazonaws.com/doc/2006-03-01/}CreationDate")
+                                        buckets.append({
+                                            "name": name_el.text if name_el is not None else None,
+                                            "creationDate": date_el.text if date_el is not None else None
+                                        })
+                                    if buckets:
+                                        body_entry = {"type": "s3_bucket_list", "count": len(buckets), "buckets": buckets}
+                                    else:
+                                        # Fallback: plain text sample
+                                        sample = text[:2000]
+                                        body_entry = {"type": "text", "sample": sample, "truncated": len(text) > 2000}
+                                except Exception:
+                                    # Generic text fallback
+                                    sample = text[:2000]
+                                    body_entry = {"type": "text", "sample": sample, "truncated": len(text) > 2000}
+                        except UnicodeDecodeError:
+                            # Binary content: store base64 sample and size
                             import base64
-                            body_b64 = base64.b64encode(body_bytes).decode("ascii")
-                            body_entry = {"body": body_b64, "encoding": "base64"}
+                            b64 = base64.b64encode(body_bytes).decode("ascii")
+                            body_entry = {"type": "binary", "size": len(body_bytes), "sample_base64": b64[:2000], "truncated": len(b64) > 2000}
+
+                        # write the concise, readable JSON
                         with open(body_kv_path, "w", encoding="utf-8") as kvf:
-                            json.dump(body_entry, kvf, indent=2)
-                        logger.info("Saved response body key-value json %s", body_kv_path)
+                            json.dump(body_entry, kvf, indent=2, ensure_ascii=False)
+                        logger.info("Saved readable response body JSON %s", body_kv_path)
+
                     except Exception:
-                        logger.exception("Failed to create body key-value JSON")
+                        logger.exception("Failed to create readable body key-value JSON")
                 else:
-                    # no body file saved (e.g., zero-length or streaming not captured)
                     logger.debug("No response body file to create key-value JSON for req %s", req_id)
             except Exception:
-                logger.exception("Unexpected error while writing body key-value JSON")
+                logger.exception("Unexpected error while writing readable body key-value JSON")
 
     resp_headers = _filter_response_headers(resp.headers)
     flask_resp = Response(generate(), status=resp.status_code, headers=resp_headers)
